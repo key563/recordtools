@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.key.modules.account.mapper.AccountInformationMapper">
+    <resultMap id="BaseResultMap" type="com.key.modules.account.model.AccountInformation">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="account_wangwang_name" property="accountWangwangName" jdbcType="VARCHAR"/>
+        <result column="account_wechat_name" property="accountWechatName" jdbcType="VARCHAR"/>
+        <result column="account_type" property="accountType" jdbcType="INTEGER"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR"/>
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, account_wangwang_name, account_wechat_name, account_type, update_time, create_time,
+        update_by, create_by
+    </sql>
+    <select id="findAllAccount" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from account_information
+    </select>
+</mapper>

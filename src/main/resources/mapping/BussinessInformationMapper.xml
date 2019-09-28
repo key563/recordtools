@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.key.modules.business.mapper.BussinessInformationMapper" >
+  <resultMap id="BaseResultMap" type="com.key.modules.business.model.BussinessInformation" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="bussiness_id" property="bussinessId" jdbcType="VARCHAR" />
+    <result column="store_name" property="storeName" jdbcType="VARCHAR" />
+    <result column="pay_money" property="payMoney" jdbcType="REAL" />
+    <result column="commission_momey" property="commissionMomey" jdbcType="REAL" />
+    <result column="cost_price" property="costPrice" jdbcType="REAL" />
+    <result column="pay_time" property="payTime" jdbcType="TIMESTAMP" />
+    <result column="bussiness_decsription" property="bussinessDecsription" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="create_by" property="createBy" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, bussiness_id, store_name, pay_money, commission_momey, cost_price, pay_time, 
+    bussiness_decsription, update_time, update_by, create_time, create_by
+  </sql>
+</mapper>
